@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A WhatsApp bot to download YouTube videos",
   "main": "index.js",
+ {
   "scripts": {
     "start": "node index.js"
   },
