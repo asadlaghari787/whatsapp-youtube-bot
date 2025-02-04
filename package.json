@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.3.0",
+    "@whiskeysockets/baileys": "^6.7.12",
     "express": "^4.21.2",
     "fs": "0.0.1-security",
     "ytdl-core": "^4.9.1"
