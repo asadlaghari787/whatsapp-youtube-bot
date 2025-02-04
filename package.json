@@ -1,0 +1,14 @@
+{
+  "name": "whatsapp-youtube-bot",
+  "version": "1.0.0",
+  "description": "A WhatsApp bot to download YouTube videos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.3.0",
+    "ytdl-core": "^4.9.1",
+    "fs": "0.0.1-security"
+  }
+}
