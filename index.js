@@ -38,8 +38,7 @@ async function startBot() {
 
     console.log("Bot started successfully!");
 }
-
-startBot();
+require('dotenv').config();
 
 // Koyeb Health Check ke liye server
 app.get("/", (req, res) => {
