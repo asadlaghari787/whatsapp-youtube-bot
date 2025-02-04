@@ -24,6 +24,29 @@ async function startBot() {
             ytdl(text, { format: format }).pipe(fs.createWriteStream(filePath)).on("finish", async () => {
                 await sock.sendMessage(chatId, { document: fs.readFileSync(filePath), mimetype: "video/mp4", fileName: "video.mp4" });
                 fs.unlinkSync(filePath);
+                const express = require("express");
+const { makeWASocket, useMultiFileAuthState } = require("@whiskeysockets/baileys");
+
+const app = express();
+const PORT = process.env.PORT || 8000;
+
+async function startBot() {
+    const { state, saveCreds } = await useMultiFileAuthState("auth_info_baileys");
+    const sock = makeWASocket({ auth: state });
+
+    sock.ev.on("creds.update", saveCreds);
+
+    console.log("Bot started successfully!");
+}
+
+startBot();
+
+// Koyeb Health Check ke liye server
+app.get("/", (req, res) => {
+    res.send("Bot is running!");
+});
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
             });
         }
     });
