@@ -28,7 +28,7 @@ async function startBot() {
 const { makeWASocket, useMultiFileAuthState } = require("@whiskeysockets/baileys");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 async function startBot() {
     const { state, saveCreds } = await useMultiFileAuthState("auth_info_baileys");
